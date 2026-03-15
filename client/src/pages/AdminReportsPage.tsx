@@ -6,6 +6,7 @@ interface report{
   id: string;
   category: string;
   message: string;
+  imageUrl?: string;
 }
 
 function AdminReportsPage() {
@@ -24,6 +25,8 @@ function AdminReportsPage() {
       setReports(data);
     }
     fetchReports();
+    // log the imageUrl of the first report for debugging
+    console.log("First report imageUrl:", reports[0]?.imageUrl);
   }, [categoryFilter, agentCodeFilter, urgencyFilter]);
 
   return (
@@ -42,6 +45,7 @@ function AdminReportsPage() {
               <th>ID</th>
               <th>Category</th>
               <th>Message</th>
+              <th>Image</th>
             </tr>  
           </thead>
           <tbody>
@@ -50,6 +54,12 @@ function AdminReportsPage() {
                 <td>{report.id}</td>
                 <td>{report.category}</td>
                 <td>{report.message}</td>
+                {report.imageUrl && (
+                  <td>
+                    <img src={report.imageUrl} alt="Report" style={{ width: "100px", height: "100px" }} />
+                  </td>
+                )}
+
               </tr>
             ))}
           </tbody>

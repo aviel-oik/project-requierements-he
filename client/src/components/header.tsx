@@ -1,8 +1,14 @@
-import React from 'react'
+// import React from 'react'
 
-function header() {
+type headerProps = {
+  title: string
+}
+
+function header({title}: headerProps) {
   return (
-    <div>header</div>
+    <div id="header">
+      <p>{title}</p>
+    </div>
   )
 }
 

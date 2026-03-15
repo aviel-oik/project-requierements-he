@@ -70,6 +70,7 @@ function AdminUsersPage() {
             <div className="admin-users-new-user-role">
               <label htmlFor="role">Role:</label>
               <select name="role" value={newUser.role} onChange={(e) => setNewUser({...newUser, role: e.target.value})} >
+                <option value="">Select Role</option>
                 <option value="admin">Admin</option>
                 <option value="agent">Agent</option>
               </select>

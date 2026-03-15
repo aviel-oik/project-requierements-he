@@ -102,5 +102,85 @@
     "role": "agent",
     "password": "123",
     "createdAt": "3/12/2026, 1:05:04 AM"
+  },
+  {
+    "id": 1773322688447,
+    "agentCode": "dc",
+    "fullName": "dvs",
+    "role": "agent",
+    "password": "svd",
+    "createdAt": "3/12/2026, 3:38:08 PM"
+  },
+  {
+    "id": 1773346808337,
+    "agentCode": "uk",
+    "fullName": "u.",
+    "role": "agent",
+    "password": "u",
+    "createdAt": "3/12/2026, 10:20:08 PM"
+  },
+  {
+    "id": 1773346858291,
+    "agentCode": "1",
+    "fullName": "1",
+    "role": "agent",
+    "password": "1",
+    "createdAt": "3/12/2026, 10:20:58 PM"
+  },
+  {
+    "id": 1773346865023,
+    "agentCode": "2",
+    "fullName": "2",
+    "role": "agent",
+    "password": "2",
+    "createdAt": "3/12/2026, 10:21:05 PM"
+  },
+  {
+    "id": 1773346871136,
+    "agentCode": "3",
+    "fullName": "3",
+    "role": "agent",
+    "password": "3",
+    "createdAt": "3/12/2026, 10:21:11 PM"
+  },
+  {
+    "id": 1773346876694,
+    "agentCode": "4",
+    "fullName": "4",
+    "role": "agent",
+    "password": "4",
+    "createdAt": "3/12/2026, 10:21:16 PM"
+  },
+  {
+    "id": 1773346883065,
+    "agentCode": "5",
+    "fullName": "5",
+    "role": "agent",
+    "password": "5",
+    "createdAt": "3/12/2026, 10:21:23 PM"
+  },
+  {
+    "id": 1773347236376,
+    "agentCode": "6",
+    "fullName": "6",
+    "role": "admin",
+    "password": "6",
+    "createdAt": "3/12/2026, 10:27:16 PM"
+  },
+  {
+    "id": 1773347253363,
+    "agentCode": "7",
+    "fullName": "7",
+    "role": "admin",
+    "password": "7",
+    "createdAt": "3/12/2026, 10:27:33 PM"
+  },
+  {
+    "id": 1773347317568,
+    "agentCode": "8",
+    "fullName": "8",
+    "role": "admin",
+    "password": "8",
+    "createdAt": "3/12/2026, 10:28:37 PM"
   }
 ]

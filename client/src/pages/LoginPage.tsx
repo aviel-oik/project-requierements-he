@@ -1,14 +1,21 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useAuthStore } from '../store/authStore';
 
 function LoginPage() {
 
     const navigate = useNavigate();
+    const { login } = useAuthStore();
+    const { logout } = useAuthStore();
 
     const[agentCode, setAgentCode] = useState('');
     const[password, setPassword] = useState('');
 
-    const login = async () => {
+    useEffect(() => {
+        logout();
+    }, [])
+
+    const handleLogin = async () => {
         const response = await fetch("http://localhost:3000/auth/login", {
             method: "POST",
             headers: {
@@ -19,6 +26,7 @@ function LoginPage() {
         const result = await response.json();
         if (response.ok) {         
             localStorage.setItem("token", result.token);
+            login(result.user);
             if (result.user.role === "admin") 
                 navigate("/admin-dashboard");
             else if (result.user.role === "agent") 
@@ -39,7 +47,7 @@ function LoginPage() {
             <label htmlFor="password">Password: </label>
             <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <button id="button" onClick={login}>Login</button>
+        <button id="button" onClick={handleLogin}>Login</button>
     </div>
   )
 }

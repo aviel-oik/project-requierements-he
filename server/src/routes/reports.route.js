@@ -112,8 +112,11 @@ router.get("/", authMiddleware, async (req, res) => {
     const lines = fileContent.split("\n").slice(1);
     const reports = lines.map(line => {
         const [id, agentCode, category, urgency, message, imagePath, sourceType, createdAt] = line.split(",");
-        return { id, agentCode, category, urgency, message, imagePath, sourceType, createdAt };
+        return { id, agentCode, category, urgency, message, 
+                      imageUrl: imagePath? `${req.protocol}://${req.get("host")}/images/${imagePath}`: null, sourceType, createdAt };
     });
+    console.log("first imagePath:", reports[0]?.imagePath);
+    console.log("first imageUrl:", reports[0]?.imageUrl);
 
     if (req.user.role === "agent"){
         const agentReports = reports.filter(report => report.agentCode === req.user.agentCode);
